@@ -1,96 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/logo/LOGO.svg" type="image/x-icon">
-    <link rel="stylesheet" href="../CSS/Header.css">
-    <link rel="stylesheet" href="../CSS/Shop_detail.css">
-    <link rel="stylesheet" href="../CSS/Footer.css">
-    <script defer src="../JS/Header.js"></script>
-    <script defer src="../JS/Footer.js"></script>
-    <script defer src="../JS/Shop_detail.js"></script>
+    <link rel="icon" href="/logo/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/shopdetail.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script defer src="../js/header.js"></script>
+    <script defer src="../js/footer.js"></script>
     <script defer src="https://kit.fontawesome.com/36d48768e1.js" crossorigin="anonymous"></script>
     <title>daeguartmuseum/Shop_detail</title>
 </head>
+
 <body>
     <header id="Header"></header>
-        <div class="Product">
-            <div id="shopdetail">
-                <div class="detail__content">
-                    <div class="detail-imgs">
-                        <div id="img_item1" class="detail-imgs__item1">
-                            <img src="../IMG/정다혜_프레인_블랙.jpeg" alt="정다혜프레임블랙">
+    <div class="Product">
+        <div id="shopdetail">
+            <div class="detail__content">
+                <div class="detail-imgs">
+                    <div id="img_item1" class="detail-imgs__item1">
+                        <img src="../IMG/정다혜_프레인_블랙.jpeg" alt="정다혜프레임블랙">
+                    </div>
+                    <div class="detail-imgs__item2">
+                        <img src="../IMG//정다혜_프레임_화이트.jpeg" alt="정다혜프레임화이트">
+                    </div>
+                    <div class="detail-imgs__item3">
+                        <img src="../IMG/정다혜_포스터!.jpeg" alt="정다혜포스터">
+                    </div>
+                    <div id="img_item2" class="detail-imgs__item3">
+                        <img src="../IMG/정다혜작가사진2.jpeg" alt="정다혜포스터">
+                    </div>
+                    <div class="detail-imgs__item4">
+                        <img src="../IMG/A3액자정보_상세페이지1.jpeg" alt="액자정보">
+                    </div>
+                    <div id="img_item3" class="detail-imgs__item5">
+                        <img src="../IMG/A3액자정보_상세페이지2.jpeg" alt="액자정보">
+                    </div>
+                </div>
+                <div class="detail-info">
+                    <div class="detail-info-top">
+                        <div class="kategori-name">
+                            frame
                         </div>
-                        <div class="detail-imgs__item2">
-                            <img src="../IMG//정다혜_프레임_화이트.jpeg" alt="정다혜프레임화이트">
+                        <div class="product-name">
+                            [ 정다혜 작가 ] 포토 + 프레임
                         </div>
-                        <div class="detail-imgs__item3">
-                            <img src="../IMG/정다혜_포스터!.jpeg" alt="정다혜포스터">
-                        </div>
-                        <div id="img_item2" class="detail-imgs__item3">
-                            <img src="../IMG/정다혜작가사진2.jpeg" alt="정다혜포스터">
-                        </div>
-                        <div class="detail-imgs__item4">
-                            <img src="../IMG/A3액자정보_상세페이지1.jpeg" alt="액자정보">
-                        </div>
-                        <div id="img_item3" class="detail-imgs__item5">
-                            <img src="../IMG/A3액자정보_상세페이지2.jpeg" alt="액자정보">
+                        <p>정다혜 작가의 전시 포스터 1장과 프레임이 같이 구성되어있는 상품입니다.</p>
+                        <div class="product-price">
+                            ₩40,000원
                         </div>
                     </div>
-                    <div class="detail-info">
-                        <div class="detail-info-top">
-                            <div class="kategori-name">
-                                frame
-                            </div>
-                            <div class="product-name">
-                                [ 정다혜 작가 ] 포토 + 프레임
-                            </div>
-                            <p>정다혜 작가의 전시 포스터 1장과 프레임이 같이 구성되어있는 상품입니다.</p>
-                            <div class="product-price">
-                                ₩40,000원
-                            </div>
-                        </div>
-                        <div class="detail-info-select">
-                            <select class="info-select1" title="제품선택" onchange="detail-info-select">
-                                <option value="제품선택">제품선택</option>
-                                <option value="기본액자_무광 화이트">기본액자_무광 / 화이트 A2</option>
-                                <option value="기본액자_무광 화이트">기본액자_무광 / 화이트 A3</option>
-                                <option value="기본액자_무광 블랙">기본액자_무광 / 블랙 A2</option>
-                                <option value="기본액자_무광 블랙">기본액자_무광 / 블랙 A3</option>
-                                <option value="기본액자_유광 화이트">기본액자_유광 / 화이트 A2</option>
-                                <option value="기본액자_유광 화이트">기본액자_유광 / 화이트 A3</option>
-                                <option value="기본액자_유광 블랙">기본액자_유광 / 블랙 A2</option>
-                                <option value="기본액자_유광 블랙">기본액자_유광 / 블랙 A3</option>
-                            </select>
-                            <div class="detail-info-cart">
-                                <div class="quantity">
-                                    <!-- <input type="button" value="-" class="minus"> -->
-                                    <label class="screen-reader-text" for="quantity_63e323e9c03fa"></label>
-                                    <!-- <input type="number" id="quantity_63e323e9c03fa" class="input-text"
+                    <div class="detail-info-select">
+                        <select class="info-select1" title="제품선택" onchange="detail-info-select">
+                            <option value="제품선택">제품선택</option>
+                            <option value="기본액자_무광 화이트">기본액자_무광 / 화이트 A2</option>
+                            <option value="기본액자_무광 화이트">기본액자_무광 / 화이트 A3</option>
+                            <option value="기본액자_무광 블랙">기본액자_무광 / 블랙 A2</option>
+                            <option value="기본액자_무광 블랙">기본액자_무광 / 블랙 A3</option>
+                            <option value="기본액자_유광 화이트">기본액자_유광 / 화이트 A2</option>
+                            <option value="기본액자_유광 화이트">기본액자_유광 / 화이트 A3</option>
+                            <option value="기본액자_유광 블랙">기본액자_유광 / 블랙 A2</option>
+                            <option value="기본액자_유광 블랙">기본액자_유광 / 블랙 A3</option>
+                        </select>
+                        <div class="detail-info-cart">
+                            <div class="quantity">
+                                <!-- <input type="button" value="-" class="minus"> -->
+                                <label class="screen-reader-text" for="quantity_63e323e9c03fa"></label>
+                                <!-- <input type="number" id="quantity_63e323e9c03fa" class="input-text"
                                      step="1" min="1" max="" name="quantity" value="1" title="수량" size="4" 
                                      placeholder="" inputmode="numeric" autocomplete="off" 
                                      style="font-size: 1.5rem; border: none; width: 5vw;">
                                     <input type="button" value="+" class="plus"> -->
-                                    <p class="input-text">
-                                        <span>-</span>
-                                        <span>0</span>
-                                        <span>+</span>
-                                    </p>
-                                </div>
-                                <button type="submit" class="single_add_to_cart_button">장바구니 담기</button>
+                                <p class="input-text">
+                                    <span>-</span>
+                                    <span>0</span>
+                                    <span>+</span>
+                                </p>
                             </div>
+                            <button type="submit" class="single_add_to_cart_button">장바구니 담기</button>
                         </div>
-                        <ul class="product-indexer">
-                            <li><a href="#img_item1" target="_self">Product Detail</a></li>
-                            <li><a href="#img_item2" target="_self">Frame size</a></li>
-                            <li><a href="#img_item3" target="_self">Delivery</a></li>
-                        </ul>
                     </div>
+                    <ul class="product-indexer">
+                        <li><a href="#img_item1" target="_self">Product Detail</a></li>
+                        <li><a href="#img_item2" target="_self">Frame size</a></li>
+                        <li><a href="#img_item3" target="_self">Delivery</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
     <footer id="Footer"></footer>
 </body>
+
 </html>
