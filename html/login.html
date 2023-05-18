@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <link rel="icon" href="/logo/LOGO.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/Header.css">
+    <link rel="stylesheet" href="../CSS/Login.css">
+    <link rel="stylesheet" href="../CSS/Footer.css">
+    <script defer src="../JS/Header.js"></script>
+    <script defer src="../JS/Login.js"></script>
+    <script defer src="../JS/Footer.js"></script>
+    <script defer src="https://kit.fontawesome.com/36d48768e1.js" crossorigin="anonymous"></script>
+    <title>daeguartmuseum/login</title>
+</head>
+<body>
+    <!-- header(js clude) -->
+    <header id="Header"></header>
+    <!-- container -->
+    <div id="container" role="main">
+        <!-- login box -->
+        <div class="selector_login">
+            <div class="login_form">로그인</div>
+            <div class="p">대구 박물관 스토어를 방문하여 주셔서 감사합니다.</div>
+            <form id="left" action="#" method="post">
+                <div class="int-area">
+                    <input type="email" name="Email/PhonNum" id="id" placeholder="이메일 / 아이디">
+                    <label for="id"></label>
+                </div>
+                <div class="int-area">
+                    <input type="password" name="PW" id="pw" placeholder="비밀번호" maxlength="20" required>
+                    <label for="pw"></label>
+                </div>
+                <div class="btn-area">
+                    <div class="login_btn">
+                        <form action="../HTML/Main.html">
+                            <input type="submit" value="로그인" class="B_login">                            
+                        </a>
+                    </div>
+                    <div><a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com" class="B_naver">네이버 로그인</a></div>
+                    <div><a onclick="window.open('https://kauth.kakao.com/oauth/authorize?client_id=79e13928f1cf993b2db5c76dc2c43349&amp;redirect_uri=https://tamburins.com/plugin/social/kakao_login_member.php&amp;response_type=code&amp;state=', 'window_name', 'width=430, height=500, location=no, status=no, scrollbars=yes');" class="B_kakao">카카오 로그인</a></div>
+                    <div><a class="find_pw">비밀번호를 잊으셨나요?</a></div>
+                </div>
+            </form>
+        </div>
+        <!-- join box -->
+        <div class="selector_join">
+            <div class="join_form">회원가입</div>
+            <div class="p">계정을 생성하여 개인 맞춤형 쇼핑 경험과 더 빠른 온라인 결제혜택을 
+                누려보세요.
+            </div>
+            <form class="phon-number" name="phon-number" action="#" method="post">
+                <!-- <div class="country-code">
+                    <select id="cd" class="sel-country-code" title="국가코드" onchange="selcountrycode()">
+                        <option value="82">+ 82</option>
+                        <option value="1">+ 1 미국/캐나다</option>
+                        <option value="86">+ 86 중국</option>
+                        <option value="81">+ 81 일본</option>
+                    </select>
+                    <div class="int-pn">
+                        <label for="phonNum" id="join-pn"></label>
+                        <input placeholder="휴대폰번호" type="text" name="phonNum" id="phonNum" required maxlength="11">
+                    </div>
+                </div> -->
+                <div class="B_cord">
+                    <a href="./Join.html">
+                        <input type="submit" value="신규회원가입" class="B_login">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- // container -->
+    <footer id="Footer"></footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/logo/LOGO.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/Shop.css">
+    <link rel="stylesheet" href="../CSS/Header.css">
+    <link rel="stylesheet" href="../CSS/Footer.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script defer src="../JS/Header.js"></script>
+    <script defer src="../JS/Footer.js"></script>
+    <script defer src="../JS/Shop.js"></script>
+    <script defer src="https://kit.fontawesome.com/36d48768e1.js" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>daeguartmuseum/SHOP</title>
+</head>
+
+<body>
+    <header id="Header"></header>
+    <!-- 제품검색 -->
+    <div class="filter_right">
+        <div class="facetwp-facet facetwp-facet-shop_filter_search facetwp-type-search" data-name="shop_filter_search"
+            data-type="search">
+            <span class="facetwp-input-wrap">
+                <i class="facetwp-icon"></i>
+                <input type="text" class="facetwp-search" value="" placeholder="상품 검색" autocomplete="off">
+            </span>
+        </div>
+        <div class="facetwp-facet facetwp-facet-shop_filter_sort facetwp-type-sort" data-name="shop_filter_sort"
+            data-type="sort">
+            <select>
+                <option value="">최근 등록순</option>
+                <option value="rower_price">낮은 가격순</option>
+                <option value="product_title">상품명순</option>
+                <option value="best_product">인기순</option>
+            </select>
+        </div>
+    </div>
+    <!-- 모바일 카테고리 버튼 -->
+    <div class="shop-page">
+        <div class="shop-container">
+            <div class="nav-Kategorie_top">
+                <button class="KategorieBtn" data-view="tab1">All Types</button>
+                <button class="KategorieBtn" data-view="tab2">Frame</button>
+                <button class="KategorieBtn" data-view="tab3">Poster</button>
+                <button class="KategorieBtn" data-view="tab4">Stationery</button>
+                <button class="KategorieBtn" data-view="tab5">Living</button>
+                <button class="KategorieBtn" data-view="tab6">Book</button>
+                <button class="KategorieBtn" data-view="tab7">onlyDAM</button>
+            </div>
+            <div class="nav-Kategorie">
+                <button class="KategorieBtn" data-view="tab2_1">All Exhibtions</button>
+                <button class="KategorieBtn" data-view="tab2_2">Lee be</button>
+                <button class="KategorieBtn" data-view="tab2_3">Jeong DaHye</button>
+                <button class="KategorieBtn" data-view="tab2_4">Hito Steyerl</button>
+                <button class="KategorieBtn" data-view="tab2_5">Daniel buren</button>
+            </div>
+        </div>
+        <!-- 데스크탑 카테고리 버튼 -->
+        <!-- <div class="nav-Kategorie-desktop">
+                <div class="K_despt sk">
+                    <h3>SHOP</h3>
+                    <div class="k-list">All type</div>
+                    <div class="k-list">Frame</div>
+                    <div class="k-list">Stationery</div>
+                    <div class="k-list">Living</div>
+                    <div class="k-list">Book</div>
+                    <div class="k-list">onlyDAM</div>
+                </div>
+            </div> -->
+        <!-- 아이템 리스트 -->
+        <div class="product-list">
+            <div class="product-list-layout">
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- 이벤트배너 -->
+    <div class="bannerSwiper">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="banner-img s-img1"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="banner-img s-img2"></div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+    <footer id="Footer"></footer>
+</body>
+
+</html>

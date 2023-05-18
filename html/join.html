@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>daeguartmuseum/join</title>
+    <link rel="icon" href="/logo/LOGO.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Join.css">
+    <link rel="stylesheet" href="../CSS/Header.css">
+    <link rel="stylesheet" href="../CSS/Footer.css">
+    <script defer src="https://kit.fontawesome.com/36d48768e1.js" crossorigin="anonymous"></script>
+    <script defer src="../JS/Header.js"></script>
+    <script defer src="../JS/Footer.js"></script>
+    <script defer src="../JS/Join.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <div id="Header"></div>
+    
+    <!-- container -->
+    <div class="join_page">
+        <div class="join_content">
+            <!-- 빠른 회원가입 -->
+            <section class="section_join_kakao">
+                <div class="join_kakao">
+                    <div class="join_kakao_title">
+                        <h1>빠른 회원가입</h1>
+                        <p class="sub_title">카카오 계정으로 간편하게 회원가입을 해보세요.</p>
+                    </div>
+                    <div class="join_kakao_btn">
+                        <button
+                            onclick="window.open('https://kauth.kakao.com/oauth/authorize?client_id=79e13928f1cf993b2db5c76dc2c43349&amp;redirect_uri=https://tamburins.com/plugin/social/kakao_login_member.php&amp;response_type=code&amp;state=', 'window_name', 'width=430, height=500, location=no, status=no, scrollbars=yes');"
+                            class="join-kakao-link font--bd">카카오 계정으로 1초 가입하기</button>
+                    </div>
+                </div>
+            </section>
+            <!-- 일반 회원가입 -->
+            <section class="section_join_form">
+                <form id="join" method="get" action="../HTML/Join_hello.html">
+                    <h1>일반 회원가입</h1>
+                    <div class="common__input-item">
+                        <div class="common__input-label">
+                            <label class="input-label" for="email">아이디</label>
+                        </div>
+                        <div class="common__input">
+                            <input type="email" name="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="common__input-item">
+                        <div class="common__input-label">
+                            <label class="input-label" for="reg_mb_password">비밀번호</label>
+                        </div>
+                        <div class="common__input">
+                            <input type="password" name="mb_password" id="reg_mb_password" required="" class="input input-required"size="20" maxlength="20" autocomplete="new-password">
+                        </div>
+                    </div>
+                    <div class="common__input-item">
+                        <div class="common__input-label">
+                            <label class="input-label" for="reg_mb_password_re">비밀번호 확인</label>
+                        </div>
+                        <div class="common__input">
+                            <input type="password" name="mb_password_re" id="reg_mb_password_re" required=""
+                                class="input input-required" size="20" maxlength="20" autocomplete="new-password">
+                        </div>
+                    </div>
+                    <div class="common__input-item password-notice">
+                        <ul>
+                            <li class="member-notice__item">· 영문 대소문자는 구분이 되며, 최소 1개의 대문자, 특수문자, 숫자가 포함 된 비밀번호를 사용 하셔야 됩니다.</li>
+                            <li class="member-notice__item">· 사용 가능한 특수문자: ! @ # $ % ^ &amp; * ( ) - + / &lt; &gt; , .</li>
+                        </ul>
+                    </div>
+                    <div class="common__input-item">
+                        <div class="common__input-label">
+                            <label class="input-label" for="reg_mb_name">성별</label>
+                        </div>
+                        <div class="tam-select">
+                            <div class="tam-select__wrap">
+                                <span class="tam-select__ico"></span>
+                                <select class="tam-select__input input" name="mb_sex" id="gender-select">
+                                    <option value="" selected="" disabled="">성별을 선택해주세요.</option>
+                                    <option value="남">남자</option>
+                                    <option value="여">여자</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="common__input-item input-item--phone">
+                        <div class="common__input-label">
+                            <label class="input-label" for="">연락처</label>
+                        </div>
+                        <div class="common__input common__input--btn">
+                            <input type="tel" id="reg_mb_hp" name="mb_hp" value="" required="" class="input input-required"
+                                placeholder="예 : 01012341234" autocomplete="email" pattern="[0-9]*" inputmode="numberic"
+                                maxlength="13">
+                            <button id="register_hp_send-btn" class="input-btn js-show-btn" type="button"
+                                onclick="alert('확인을 누르시면 인증번호가 발송됩니다.');" style="cursor: pointer;">인증하기</button>
+                        </div>
+                    </div>
+                    <div class="common__input-item">
+                        <div class="common__input-label">
+                            <label for="name">이름</label>
+                        </div>
+                        <div class="common__input">
+                            <input type="text" name="name" id="name" required minlength="2" maxlength="5">
+                        </div>
+                    </div>
+                    <div class="common__input-item">
+                        <div class="common__input-label">
+                            <label class="input-label" for="reg_mb_birth">생년월일(양력)</label>
+                        </div>
+                        <div class="common__input">
+                            <input type="text" id="reg_mb_birth" value="" required="" class="input input-required" size="8"
+                                placeholder="예 : 2020-01-31" pattern="[0-9]*" inputmode="numberic">
+                            <input type="hidden" id="reg_mb_birth-hidden" name="mb_birth" value="">
+                        </div>
+                    </div>
+                    <!-- 동의체크박스 -->
+                    <div class="legals__list">
+                    <div class="checkbox-item check-all-item">
+                        <input type="checkbox" id="legals_check_all" class="checkbox-input">
+                        <span class="checkbox-shape"></span>
+                        <label for="legals_check_all" class="checkbox-label">모두 동의합니다.</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="legals_age" class="checkbox-input">
+                        <span class="checkbox-shape"></span>
+                        <label for="legals_age" class="checkbox-label">(필수) 본인은 만 14세 미만이 아닙니다.</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="legals_terms" class="checkbox-input">
+                        <span class="checkbox-shape"></span>
+                        <label for="legals_terms" class="checkbox-label">(필수) 이용약관에 동의합니다.</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="legals_privacy" class="checkbox-input">
+                        <span class="checkbox-shape"></span>
+                        <label for="legals_privacy" class="checkbox-label">(필수) 개인정보처리방침에 동의합니다.</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="legals_etc" name="legals_etc" class="checkbox-input" value="1">
+                        <span class="checkbox-shape"></span>
+                        <label for="legals_etc" class="checkbox-label">(선택) 대구미술관에서 제공하는 소식을 SMS, 이메일로 받겠습니다.</label>
+                    </div>
+                    </div>
+                    <div class="join_btn">
+                        <input type="submit" value="가입하기" class="B_join">
+                    </div>
+                </form>
+            </section>
+        </div>   
+    </div>
+    <!-- footer -->
+    <div id="footer"></div>
+   
+</body>
+
+</html>

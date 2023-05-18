@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SUIT', sans-serif;
+}
+
+/* 1. Mobile First CSS (765px) */
+.menuHover {
+    display: grid;
+    grid-template-areas: 
+    'list'
+    'logo';
+}
+.manu-list {
+    grid-area: list;
+}
+.menu-list-logo {
+    grid-area: logo;
+}
+.manu-list div {
+    border-bottom: 1px solid #000;
+    padding: 20px;
+    font-size: 5vw;
+}
+.manu-list a {
+    text-decoration: none;
+    color: #000;
+}
+.manu-list i {
+    font-size: 5vw;
+    float: right;
+}
+.menu-list-logo img {
+    padding: 20px;
+    height: 18vh;
+    float: right;
+    margin-top: 65%;
+    bottom: 0;
+}
+
+
+

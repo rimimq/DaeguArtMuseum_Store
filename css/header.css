@@ -1,0 +1,702 @@
+*{
+    margin: 0;
+    padding: 0;
+    right: 0;
+    box-sizing: border-box;
+    /* font-family: 'SUIT', sans-serif; */
+    
+}
+#Header { position: relative; }
+.view_none { display: none; }
+
+/* 1. Mobile First CSS (765px) */
+
+/* 카트 */
+#cart {
+    /* background: rgba(100, 100, 100, 0.5); */
+    z-index: 998;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    transition: all .7s;
+}
+.cart-hidden { transform:translateX(400px); }
+.close_btn i {margin: 14px;}
+.cart-open {
+    background: rgb(246, 246, 246);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    position: absolute;
+    /* right: -400px; */
+    top: 0;
+    bottom: 0;
+    transition: all .35s;
+    /* transition: transform .5s cubic-bezier(.4,0,.2,1); */
+    width: 400px;
+}
+.nav-cart:checked + .cart-open {
+    right: -400px;
+}
+.cart-open .cart-top-var {
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    height: 44px;
+}
+.cart-num, .close {
+    padding: 15px;
+    margin: 20x;
+}
+.cart-top-var .close {
+    transition: transform .2s cubic-bezier(.4,0,.2,1);
+}
+.cart-open .cart-list {
+    overflow-y: auto;
+    margin: 20px;
+}
+.ul-item{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.cart-list .ul-item li {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: grid;
+    gap: 13px;
+    grid-template-columns: 30% 1fr auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.image-sizer1 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../IMG/다니엘뷔렌_폰케이스.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.image-sizer2 {
+    width: 100%;
+    height: 100%;
+    background-image: url("../IMG/dam_캔들.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ul-item li .info {
+    padding: 10px 10px;
+}
+.item-link{
+    text-decoration: none;
+}
+.item-link h4 {
+    color: #222;
+    margin-bottom: 20px;
+}
+.ul-item li .info span {
+    display: block;
+}
+.ul-item li .price-remove {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+.price-remove button {
+    border: none;
+    background: #fff;
+    display: flex;
+    justify-content: flex-end;
+}
+.cart-checkout {
+    border-top: 1px solid #ccc;
+}
+.cart-checkout .subtotal {
+    align-items: center;
+    display: flex;
+    margin: 5px 15px;
+    font-weight: 500;
+    font-size: 20px;
+    justify-content: space-between;
+}
+.cart-checkout .subtotal span {
+    margin: 10px;
+}
+.cart-checkout .checkout-btn .inverse {
+    background: #222;
+    color: #fff;
+}
+.cart-checkout .checkout-btn {
+    width: 90%;
+    background: rgb(0, 0, 0);
+    border: 1px solid #222;
+    border-radius: 30px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    display: block;
+    font-size: 1.1rem;
+    line-height: 1;
+    text-decoration: none;
+    margin: 20px 20px 20px 20px;
+    padding: 1em 50px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: bacgtroundn .3s ease,border-color .3s ease,color .3s ease;
+}
+
+/* 
+div[id="cart"] {display: none;}
+div[id="cart"] {display: none;} */
+
+/* 좌측메뉴바 */
+input[id="menuvar"] { display: none; }
+input[id="menuvar"] + label {
+    display: block;
+    width: 27px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+input[id="menuvar"] + label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2.6px;
+    border-radius: 0px;
+    background: rgb(0, 0, 0);
+    transition: all .35s;
+}
+input[id="menuvar"] + label span:nth-child(1) { top: 0; }
+input[id="menuvar"] + label span:nth-child(2) { top: 50%; transform: translateY(-50%);}
+input[id="menuvar"] + label span:nth-child(3) { bottom: 0; }
+input[id="menuvar"]:checked + label span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+input[id="menuvar"]:checked + label span:nth-child(2) { opacity: 0;}
+input[id="menuvar"]:checked + label span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+
+div[class="menuHover_overlay"] {
+    width: 580px;
+    height: 1222px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: -580px;
+    z-index: 1;
+    transition: all .45s;
+}
+input[id="menuvar"]:checked + label + div {
+    left: 0;
+}
+.menuHover_overlay {
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+}
+.menuHover {
+    margin-top: 29.6%;
+    display: grid;
+    grid-column: 1fr 2fr;
+    grid-template-areas: 
+    'list'
+    'logo';
+}
+.manu-list {
+    height: 460px;
+    width: 100%;
+    grid-area: list;
+    background: rgb(255, 255, 255);
+    border-right: 1px solid #222;
+}
+.menu-list-logo {
+    grid-area: logo;
+    background: rgb(255, 255, 255);
+    border-right: 1px solid #222;
+}
+.manu-list div {
+    border-bottom: 1.5px solid #222;
+    padding: 20px;
+    font-size: 5vw;
+}
+.manu-list a {
+    text-decoration: none;
+    color: #222;
+}
+.manu-list i {
+    font-size: 5vw;
+    float: right;
+    margin-right: 20px;
+}
+.fa-arrow-right:hover {
+    transform: translateX(25%);
+    transition: all .4s;
+}
+
+.menu-list-logo {
+    -webkit-transform: translateY(50);
+    width: 35%;
+    bottom: 0;
+    margin: 120px 20px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    transition: ease 0.5s;
+}
+.menu-list-logo.on {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: .1s;
+}
+
+
+
+/* search modal */
+.navbar-container { position: fixed; left:0; top: 0; z-index: 202; }
+.modal {
+    z-index: 200;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+
+}
+.modal-content {
+    border-bottom: 1px solid #222;
+    background-color: #fff;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    transition: all .5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal-content-visible { 
+    height: 85px;
+    padding: 10px 20px;
+}
+.modal-content > input{
+    font-size: 3rem;
+    color: rgb(131, 131, 131);
+    border: none;
+    outline: none;
+    font-weight:300;
+}
+.modal-content a{
+    font-size: 2rem;
+    font-weight: 200;
+    color: #ccc;
+    border: none;
+    text-decoration: none;
+}
+
+/* 해더 */
+.navbar {
+    border-bottom: 1px solid #222;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    font-size: 2.3vh;
+    display: grid;
+    grid-template-areas: 
+    "bar . Nav2"
+    "Logo Logo Logo";
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 50px 80px;
+    gap: 40px;
+}
+.navbar.scoll-event::before {
+    display: grid;
+    grid-template-areas: 
+    "bar Logo Nav2";
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 70px;
+}
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 2);
+    color: #222;
+    transition: all 0.4s ease-in-out;
+}
+.menu-bar {
+    padding: 10px;
+    font-size: 4vw;
+    color: #222;
+}
+.H_NAV_1 {
+    display: none;
+}
+.nav-logo {
+    grid-area: bar;
+}
+.nav-h_logo {
+    grid-area: Logo;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.nav-h_logo img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    transition: .2s;
+}
+.H_NAV { grid-area: Nav2; }
+.H_NAV_2{
+    display: flex;
+    white-space:nowrap;
+}
+.H_NAV_Mobile{
+    width: 100%;
+}
+.H_NAV_Mobile > div {
+    padding: 5px 10px 5px 10px;
+}
+
+
+
+.menuIcon {
+    grid-area: Nav2;
+    float: right;
+}
+.menuIcon i {
+    margin: 1vw 0.5vw 0vw 0.5vw;
+    font-size: 4vw;
+}
+.menuIcon i:visited {
+    color: #222;
+}
+.menuIcon a{
+    color: #222;
+    
+}
+.H_NAV_Desk {
+    display: none;
+}
+
+/* 상단이벤트배너 */
+.top-banner {
+    font-family: 'Bebas Neue', cursive;
+    background: #B39A7C;
+    display: flex;
+}
+.banner-content {
+    padding: 16px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.banner-close {
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0px 20px;
+    font-weight: 700;
+}
+.banner-text {
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.banner_hidden{
+    display: none;
+}
+.popup-hidden{
+    display: none;
+}
+
+/* 이벤트 팝업창 */
+.banner-popup{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.banner-overlay{
+    position: fixed;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.3);
+}
+.banner-event-popup{
+    position: fixed;
+    width: 32em;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 999;
+    background-color: #fff;
+}
+
+#banner-event-popup {
+    visibility:hidden;
+    z-index: 998;
+    position: absolute;
+    display: grid;
+    grid-template-areas: 
+    'banimg'
+    'bantxt'
+    'banbtn';
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-columns: auto;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+#banner-event-popup label {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.banner-item-img {
+    grid-area: banimg;
+    background-image: url('../IMG/캘린더.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 50%;
+}
+.banner-item-text {
+    grid-area: bantxt;
+    margin: 50px;
+}
+.banner-item-text .bt1 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.banner-item-text .bt2 {
+    font-size: 20px;
+}
+.banner-item-text .bt3 {
+    font-size: 16px;
+    margin-top: 20px;
+    color: rgb(138, 138, 138);
+}
+.banner-item-btn {
+    grid-area: banbtn;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.banner-item-btn .banner-item-btn-go {
+    border: 1px solid #222;
+    background-color: #222;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 17px;
+    font-weight: 400;
+}
+.banner-item-btn .banner-item-btn-back {
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 20px 55px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* 채팅기능 */
+.d-none {display: none !important;}
+.chatting {
+    position: fixed;
+    justify-items: end;
+    align-items: flex-end;
+    z-index: 999999;
+}
+.chat-icon {
+    position: absolute;
+    margin-top: 85vh;
+    display: flex;
+}
+.chat-icon img{
+    cursor: pointer;
+    width: 95px;
+    height: 95px;
+    margin: 20px;
+}
+.chat-screen {
+    position: absolute;
+    margin-top: 50vh;
+    display: grid;
+    grid-template-areas:
+    'c-top'
+    'c-logo'
+    'c-cnt';
+    grid-template-rows: 50px 140px auto;
+    box-sizing: border-box;
+    /* position: absolute; */
+    width: 391px;
+    height: 523px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    /* margin-top: 100vh; */
+}
+.chat-top {
+    grid-area: c-top;
+    border-bottom: 1px solid #C8C8C8;
+}
+.chat-top img {
+    position: absolute;
+    text-align: start;
+    width: 169px;
+    height: 12px;
+    right: 185px;
+    left: 15;
+    top: 18px;
+}
+.chat-top i {
+    cursor: pointer;
+    margin: 15px 0px 0px 360px;
+}
+.chat-logo {
+    grid-area: c-logo;
+    display:inline-block;
+    text-align: center;
+}
+.chat-logo img {
+    position: relative;
+    width: 60px;
+    height: 75px;
+    padding: 0px 10px;
+}
+.fa-bolt {
+    color: gold;
+    padding-right: 5px;
+}
+.chat-cnt {
+    grid-template-areas: c-cnt;
+} 
+.chat-cnt {
+    box-sizing: border-box;
+    padding: 10px;
+}
+.chat1 {
+    box-sizing: border-box;
+    width: 340px;
+    height: 100px;
+    background: #F1F1F1;
+    border: 0.4px solid #C8C8C8;    
+    border-radius: 10px;
+    padding: 15px;
+}
+.chat2 {
+    /* box-sizing: border-box; */
+    position: absolute;
+    width: 120px;
+    height: 39px;
+    background: #000000;
+    border: 0.4px solid #C8C8C8;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 10px 10px 0px 0px;
+    cursor: pointer;
+}
+.chat2 p {
+    color: #fff;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.filter_right{
+    display: none;
+}
+
+
+/* 가로해상도가 768px이상 _tablet CSS */
+@media (min-width:768px){ 
+    /* .menu-bar{
+        padding: 10px;
+        font-size: 4vw;
+    } */
+    .menuIcon {
+        float: right;
+    }
+    .H_NAV_Desk {
+        display: none;
+    }
+}
+
+/* 가로해상도 1024px 이상_Desktop CSS*/
+@media (min-width:1024px){
+    .navbar {
+        grid-template-areas: "Nav1 Logo Nav2";
+        grid-template-columns: 1.3fr 1fr 1fr;
+        grid-template-rows: 100%;
+        border-bottom: 1px solid #222;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(4px);
+        font-size: 4vh;
+        font-weight: 100%;
+        gap: 0;
+        align-items: center;
+        padding: 20px 20px;
+    }
+    /* 데스크탑 변경 시 menu-bar 안보이게, H_NAV_1 보이게 */
+    .menu-bar {
+        display: none;
+    }
+    .nav-h_logo {
+        width: 70%;
+        margin-top: 10px;
+    }
+    .H_NAV_1 {
+        grid-area: Nav1;
+        display: flex;
+        list-style: none;
+        justify-content: flex-start;
+    }
+    .H_NAV_1 a {
+        font-size: 1vw;
+        font-weight: 350;
+        padding: 10px;
+        margin: 0px 15px 0px 15px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        color: #222;
+    }
+    .H_NAV_1::before {
+        left: -1em;
+        opacity: 0;
+        position: absolute;
+        transition: opacity .3s ease;
+    }
+    /* 데스크탑 변경 시 H_NAV_2 안보이게, H_NAV_Desk 보이게 */
+    .H_NAV_2 {
+        display: none;
+    }
+    .H_NAV_Desk {
+        display: flex;
+        float: right;
+    }
+    .H_NAV_Desk a {
+        font-size: 1vw;
+        grid-area: Nav_d;
+        font-weight: 350;
+        display: flex;
+        justify-content: center;
+        margin: 0px 17px 0px 17px;
+        text-decoration: none;
+        color: #222;
+    }
+    .H_NAV_Desk a:visited {
+        color: #222;
+    }
+
+    
+}

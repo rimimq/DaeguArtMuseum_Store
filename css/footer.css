@@ -1,0 +1,110 @@
+
+/* 1. Mobile First CSS (765px) */
+.accordion {
+  background-color: #fff;
+  color: #444;
+  border: 1px solid #000;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 22px;
+  transition: 0.4s;
+  font-weight: 600;
+}
+
+.active, .accordion:hover {
+  background-color: rgb(218, 218, 218);
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.panel p {
+  width: 100%;
+  border-bottom: 1px solid #000;
+  padding: 18px;
+  font-size: 20px;
+}
+.panel a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #000;
+}
+.panel .new {
+  text-decoration: 1px solid #444;
+}
+.accordion_low {
+  border: 1px solid #000;
+  padding: 18px;
+}
+.newsletter {
+  font-size: 22px;
+  font-weight: 600;
+  padding-bottom: 18px;
+}
+.newsletter label{
+  font-size: 200px;
+}
+.new_enter {
+  border: none;
+  border-bottom: 1px solid rgb(115, 115, 115);
+  color: rgb(142, 142, 142);
+  width: 60%;
+  padding: 10px;
+}
+.new_sub {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  height: 40px;
+  width: 200px;
+  line-height: 35px;
+  font-weight: 500;
+  position: relative;
+  padding-left: 30px;
+  transition: transform .2s ease;
+}
+.new_sub p {
+  border: 2px solid #000;
+}
+.new_sub p:hover {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.Footer_low {
+  padding: 50px 0px 10px 0px;
+}
+.Footer_low span {
+  margin: 0px 10px 0px 5px;
+  cursor: pointer;
+}
+.accordion_low .newsletter .new_sub {
+  transform: translate(1em)
+}
+.space a{
+  text-decoration: none;
+  color: #000;
+}
+.space a:visited {
+  color: #000;
+}
+
+
+
