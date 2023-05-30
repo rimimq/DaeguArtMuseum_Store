@@ -203,11 +203,11 @@
     height: 100%;
 }
 .s-img1 {
-    background: url('/img/이벤트배너_캘린더.png') no-repeat center;
+    background: url('/img/eventbenner1.png') no-repeat center;
     background-size: cover;
 }
 .s-img2 {
-    background: url('/img/이벤트배너_컵.jpeg') no-repeat center;
+    background: url('/img/eventbenner2.jpeg') no-repeat center;
     background-size: cover;
 }
 .swiper-button-prev , .swiper-button-next {

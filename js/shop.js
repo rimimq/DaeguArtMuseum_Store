@@ -14,55 +14,55 @@
 const productlist = {
     'tab1': [
         {
-            img: '/img/컵1.jpg',
+            img: '/img/damcup.jpg',
             name: '[onlyDAM] DAM 머그컵 set',
             type: 'Living',
             price: '38,000'
         },
         {
-            img: '/img/dam_캔들.jpg',
+            img: '/img/damcandle.jpg',
             name: '[onlyDAM] DAM 캔들',
             type: 'Living',
             price: '15,000'
         },
         {
-            img: '/img/히토_노트.jpg',
+            img: '/img/hitonote.jpg',
             name: '[히토슈타이얼] 스프링노트',
             type: 'Stationery',
             price: '7,000'
         },
         {
-            img: '/img/정다혜 도록.jpg',
+            img: '/img/jeongdahaebook.jpg',
             name: '[정다혜] 전시도록',
             type: 'Book',
             price: '20,000'
         },
         {
-            img: '/img/편지봉투.jpg',
+            img: '/img/letter.jpg',
             name: '[onlyDAM] 엽서봉투',
             type: 'onlyDAM',
             price: '5,000'
         },
         {
-            img: '/img/다니엘뷔렌_테이프.png',
+            img: '/img/danieltape.png',
             name: '[다니엘뷔렌] 스티커 테이프',
             type: 'Stationery',
             price: '5,000'
         },
         {
-            img: '/img/이배_캔들.jpg',
+            img: '/img/ebecandle.jpg',
             name: '[이배] 석고캔들',
             type: 'Living',
             price: '15,000'
         },
         {
-            img: '/img/dam_프레임3.jpg',
+            img: '/img/damframe3.jpg',
             name: '[onlyDAM] 포스터 + 프레임',
             type: 'Frame',
             price: '38,000'
         },
         {
-            img: '/img/다니엘뷔렌_폰케이스.jpg',
+            img: '/img/danielphon.jpg',
             name: '[다니엘뷔렌] 폰케이스',
             type: 'Stationery',
             price: '12,000'
@@ -71,49 +71,49 @@ const productlist = {
     ],
     'tab2': [
         {
-            img: '/img/정다혜_프레인_블랙.jpeg',
+            img: '/img/jeongdahaeframe1.jpeg',
             name: '[정다혜] 포스터 + 프레임',
             type: 'Frame',
             price: '38,000 ₩'
         },
         {
-            img: '/img/히토슈타이얼_프레임.jpeg',
+            img: '/img/hotoframe.jpeg',
             name: '[히토슈타이얼] 포스터 + 프레임',
             type: 'Frame',
             price: '38,000 ₩'
         },
         {
-            img: '/img/dam_프레임1.jpg',
+            img: '/img/damframe1.jpg',
             name: '[onlyDAM] 포스터 + 프레임',
             type: 'Frame',
             price: '38,000 ₩'
         },
         {
-            img: '/img/dam_프레임3.jpg',
+            img: '/img/damframe3.jpg',
             name: '[onlyDAM] 포스터 + 프레임',
             type: 'Frame',
             price: '38,000 ₩'
         },
         {
-            img: '/img/정다혜_프레임.jpg',
+            img: '/img/jeongdahaeframe2.jpg',
             name: '[정다혜] 포스터 + 프레임',
             type: 'Frame',
             price: '38,000 ₩'
         },
         {
-            img: '/img/다니엘뷔렌_프레임.jpg',
+            img: '/img/danielframe.jpg',
             name: '[다니엘뷔렌] 포스터 + 프레임',
             type: 'Frame',
             price: '38,000 ₩'
         },
         {
-            img: '/img/이배_프레임.jpg',
+            img: '/img/ebaeframe.jpg',
             name: '[이배] 포스터 + 프레임',
             type: 'Frame',
             price: '38,000 ₩'
         },
         {
-            img: '/img/정다혜_프레임_화이트.jpeg',
+            img: '/img/jeongdahaeframe3.jpeg',
             name: '[정다혜] 포스터 + 프레임',
             type: 'Frame',
             price: '38,000 ₩'
