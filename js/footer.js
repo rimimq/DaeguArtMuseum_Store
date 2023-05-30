@@ -1,6 +1,6 @@
 const Footer = document.querySelector('#Footer');
 
-fetch('../HTML/Footer.html')
+fetch('footer.html')
 .then(res => res.text())
 .then(data => { 
     Footer.innerHTML = data

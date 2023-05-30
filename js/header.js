@@ -2,7 +2,7 @@
 
 const header = document.querySelector('#Header');
 
-fetch('../HTML/Header.html')
+fetch('header.html')
     .then(res => res.text())
     .then(data => {
         header.innerHTML = data;
