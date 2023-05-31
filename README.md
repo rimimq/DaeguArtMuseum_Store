@@ -1,2 +1,2 @@
 # DaeguArtMuseum_Store
-https://rimimq.github.io/DaeguArtMuseum_Store/shop.html
+https://rimimq.github.io/DaeguArtMuseum_Store/index.html
