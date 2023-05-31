@@ -462,7 +462,7 @@ input[id="menuvar"]:checked + label + div {
 }
 .banner-item-img {
     grid-area: banimg;
-    background-image: url('../IMG/캘린더.png');
+    background-image: url('/img/calender.png');
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;

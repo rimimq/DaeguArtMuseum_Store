@@ -7,6 +7,7 @@ fetch('footer.html')
     footerInit();
 })
 
+//아코디언 메뉴바
 function footerInit() {
     let accordion = document.getElementsByClassName("accordion");
     for (let i = 0; i < accordion.length; i++) {
