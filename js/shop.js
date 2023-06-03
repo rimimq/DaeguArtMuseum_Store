@@ -141,7 +141,7 @@ for (prop in productlist) {
 
         div.innerHTML = `
             <a href="./shopdetail.html">
-                <img class="Product_img" src="..${item.img}" alt="${item.name}">
+                <img class="Product_img" src="${item.img}" alt="${item.name}">
                 <div class="Product_type">${item.type}</div>
                 <div class="Product_name">${item.name}</div>
                 <div class="Product_price">₩${item.price}</div>
